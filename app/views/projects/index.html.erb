@@ -1,0 +1,15 @@
+<% provide(:title, "Projects") %>
+<div class="total-project d-flex flex-column px-2 position-relative">
+  <div class="exp-total fw-bold  d-flex justify-content-center align-items-center mt-1 mb-4">
+    <span class="me-2">
+      Projects:<%=@projects.count%>
+    </span>
+    <span>
+      Total duration: <%= total_project(@projects)  %>
+    </span>
+  </div>
+  <%= render 'project' %>
+  <div class="new-ex-btn text-center bg-succes position-fixed d-flex align-items-center justify-content-center">
+    <%= link_to 'New Project', new_project_path, class:'text-white text-decoration-none new-exp' %>
+  </div>
+</div>
